@@ -20,5 +20,5 @@ from watchmate.views import home
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',home, name='home'),  # Home view), 
-    path('movie/', include('watchlist_app.urls')),  # Include the watchlist_app URLs
+    path('movie/', include('watchlist_app.api.urls')),  # Include the watchlist_app URLs
 ]

@@ -1,14 +1,23 @@
-from django.shortcuts import render
+# from django.shortcuts import render
 
-# Create your views here.
-from .models import Movie
+# # Create your views here.
+# from .models import Movie
 
-from django.http import JsonResponse #queryset->python dict-> json response
+# from django.http import JsonResponse #queryset->python dict-> json response
 
 
-def movie_list(request):
-    movies = Movie.objects.all() # we want to use it as a json response 
-    data= {
-        'movies':list (movies.values()) # object list .values when used as a iterable gives dicts
-    }# dict till here
-    return JsonResponse(data)  #returning the json format of this 
+# def movie_list(request):
+#     movies = Movie.objects.all() # we want to use it as a json response 
+#     data= {
+#         'movies':list (movies.values()) # object list .values when used as a iterable gives dicts
+#     }# dict till here
+#     return JsonResponse(data)  #returning the json format of this 
+
+# def movie_detail(request, pk):
+#     movie = Movie.objects.get(pk=pk)
+#     data= {
+#         'name ': movie.name, # object list .values when used as a iterable gives dicts
+#         'desc': movie.description,
+#         'active': movie.active 
+#     }# dict till here
+#     return JsonResponse(data)
